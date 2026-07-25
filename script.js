@@ -103,6 +103,63 @@ const castles = {
 
 };
 
+function showCastle(name) {
+    const castle = castles[name];
+
+    if (!castle) {
+        console.warn(`No castle data found for: ${name}`);
+        return;
+    }
+
+    // Main heading
+    holdName.textContent = name;
+
+    // Information values
+    owner.textContent = castle.owner;
+    jarl.textContent = castle.commander;
+    status.textContent = castle.status;
+    strength.textContent = `${castle.garrison} Soldiers`;
+    description.textContent = castle.description;
+
+    // Change the information labels for castle details
+    document.querySelector("#owner")
+        .closest(".info-card")
+        .querySelector("h3").textContent = "Current Owner";
+
+    document.querySelector("#jarl")
+        .closest(".info-card")
+        .querySelector("h3").textContent = "Commander";
+
+    document.querySelector("#status")
+        .closest(".info-card")
+        .querySelector("h3").textContent = "Status";
+
+    document.querySelector("#strength")
+        .closest(".info-card")
+        .querySelector("h3").textContent = "Garrison";
+
+    document.querySelector("#description")
+        .closest(".notes-card")
+        .querySelector("h3").textContent = "Fort Information";
+
+    // Update the owner badge
+    ownerBadge.textContent = castle.owner;
+    ownerBadge.className = `owner-badge ${ownerClass(castle.owner)}`;
+
+    // Remove selection from the large hold markers
+    markers.forEach(marker => {
+        marker.classList.remove("selected");
+    });
+
+    // Highlight the selected castle hotspot
+    document.querySelectorAll(".castle-hotspot").forEach(button => {
+        button.classList.toggle(
+            "selected",
+            button.dataset.castle === name
+        );
+    });
+}
+
 const holdName = document.getElementById("holdName");
 const owner = document.getElementById("owner");
 const jarl = document.getElementById("jarl");
