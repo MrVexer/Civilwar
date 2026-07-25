@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Skyrim Civil War Map</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+<style>
+html,body{
+    margin:0;
+    height:100%;
+    background:#0f0f0f;
+    font-family:Georgia,serif;
+}
+
+#map{
+    width:100%;
+    height:100%;
+}
+
+#title{
+    position:absolute;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:9999;
+    background:rgba(20,20,20,.85);
+    color:white;
+    padding:15px 30px;
+    border-radius:10px;
+    text-align:center;
+    border:2px solid #8b6b32;
+}
+
+.legend{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    z-index:9999;
+    background:rgba(20,20,20,.85);
+    color:white;
+    padding:15px;
+    border-radius:10px;
+    line-height:1.8;
+    border:2px solid #8b6b32;
+}
+
+.dot{
+    width:15px;
+    height:15px;
+    display:inline-block;
+    border-radius:50%;
+    margin-right:8px;
+}
+
+.leaflet-popup-content{
+    font-family:Georgia;
+}
+</style>
+</head>
+
+<body>
+
+<div id="title">
+<h2>Skyrim Civil War</h2>
+Current Hold Ownership
+</div>
+
+<div class="legend">
+<div><span class="dot" style="background:#0b66ff;"></span>Imperial</div>
+<div><span class="dot" style="background:#d62828;"></span>Stormcloak</div>
+<div><span class="dot" style="background:#7b2cbf;"></span>Contested</div>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+
+const imageWidth = 3000;
+const imageHeight = 2000;
+
+const map = L.map('map',{
+    crs:L.CRS.Simple,
+    minZoom:-2,
+    maxZoom:2
+});
+
+const bounds = [
+    [0,0],
+    [imageHeight,imageWidth]
+];
+
+L.imageOverlay('skyrim-map.jpg',bounds).addTo(map);
+
+map.fitBounds(bounds);
+
+const holds = [
+
+{
+name:"Haafingar",
+capital:"Solitude",
+owner:"Imperial",
+jarl:"Elisif the Fair",
+status:"Stable",
+x:850,
+y:250
+},
+
+{
+name:"Hjaalmarch",
+capital:"Morthal",
+owner:"Imperial",
+jarl:"Idgrod Ravencrone",
+status:"Stable",
+x:1100,
+y:500
+},
+
+{
+name:"The Reach",
+capital:"Markarth",
+owner:"Imperial",
+jarl:"Igmund",
+status:"Stable",
+x:350,
+y:1050
+},
+
+{
+name:"Whiterun",
+capital:"Whiterun",
+owner:"Contested",
+jarl:"Balgruuf",
+status:"Battlefront",
+x:1500,
+y:1050
+},
+
+{
+name:"Falkreath",
+capital:"Falkreath",
+owner:"Imperial",
+jarl:"Siddgeir",
+status:"Stable",
+x:800,
+y:1700
+},
+
+{
+name:"The Pale",
+capital:"Dawnstar",
+owner:"Stormcloak",
+jarl:"Skald",
+status:"Stable",
+x:1700,
+y:300
+},
+
+{
+name:"Winterhold",
+capital:"Winterhold",
+owner:"Stormcloak",
+jarl:"Korir",
+status:"Stable",
+x:2400,
+y:350
+},
+
+{
+name:"Eastmarch",
+capital:"Windhelm",
+owner:"Stormcloak",
+jarl:"Ulfric Stormcloak",
+status:"Capital",
+x:2700,
+y:800
+},
+
+{
+name:"The Rift",
+capital:"Riften",
+owner:"Stormcloak",
+jarl:"Laila Law-Giver",
+status:"Stable",
+x:2450,
+y:1700
+}
+
+];
+
+holds.forEach(hold=>{
+
+let color="#7b2cbf";
+
+if(hold.owner==="Imperial") color="#0b66ff";
+if(hold.owner==="Stormcloak") color="#d62828";
+
+L.circleMarker(
+    [hold.y,hold.x],
+    {
+        radius:10,
+        color:color,
+        fillColor:color,
+        fillOpacity:1,
+        weight:2
+    }
+)
+.addTo(map)
+.bindPopup(`
+<h2>${hold.name}</h2>
+<b>Capital:</b> ${hold.capital}<br>
+<b>Owner:</b> ${hold.owner}<br>
+<b>Jarl:</b> ${hold.jarl}<br>
+<b>Status:</b> ${hold.status}
+`);
+
+});
+
+</script>
+
+</body>
+</html>
