@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vengeful Realms | Civil War Map</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <img src="logo.png" alt="Vengeful Realms Logo" class="logo" onerror="this.style.display='none'">
+      <div>
+        <h1>Vengeful Realms</h1>
+        <p>Interactive Skyrim Civil War Map</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="notice intro-panel">
+      <div>
+        <h2>Civil War Command Map</h2>
+        <p>
+          Select a hold marker to view its current allegiance, leadership,
+          military strength, campaign status, and notes.
+        </p>
+      </div>
+
+      <div class="map-actions">
+        <button id="zoomOut" type="button">−</button>
+        <button id="resetView" type="button">Reset View</button>
+        <button id="zoomIn" type="button">+</button>
+      </div>
+    </section>
+
+    <section class="campaign-layout">
+      <div class="map-panel">
+        <div class="filter-bar" aria-label="Map filters">
+          <button class="filter-button active" data-filter="all">All</button>
+          <button class="filter-button" data-filter="Empire">Empire</button>
+          <button class="filter-button" data-filter="Stormcloaks">Stormcloaks</button>
+          <button class="filter-button" data-filter="Neutral">Neutral</button>
+          <button class="filter-button" data-filter="Contested">Contested</button>
+        </div>
+
+        <div class="map-viewport" id="mapViewport">
+          <div class="map-stage" id="mapStage">
+            <img
+              src="WarMapBase.png"
+              id="skyrimMap"
+              alt="Map of Skyrim showing the nine holds"
+              draggable="false"
+            >
+
+            <button class="hold-marker" data-hold="Haafingar" style="--x:31.9%; --y:14.4%;" aria-label="Open Haafingar">
+              <span>Haafingar</span>
+            </button>
+
+            <button class="hold-marker" data-hold="Hjaalmarch" style="--x:38.6%; --y:28.8%;" aria-label="Open Hjaalmarch">
+              <span>Hjaalmarch</span>
+            </button>
+
+            <button class="hold-marker" data-hold="The Reach" style="--x:6.6%; --y:48.7%;" aria-label="Open The Reach">
+              <span>The Reach</span>
+            </button>
+
+            <button class="hold-marker" data-hold="Whiterun" style="--x:54.2%; --y:51.8%;" aria-label="Open Whiterun">
+              <span>Whiterun</span>
+            </button>
+
+            <button class="hold-marker" data-hold="Falkreath" style="--x:41.0%; --y:81.2%;" aria-label="Open Falkreath">
+              <span>Falkreath</span>
+            </button>
+
+            <button class="hold-marker" data-hold="The Pale" style="--x:56.0%; --y:15.0%;" aria-label="Open The Pale">
+              <span>The Pale</span>
+            </button>
+
+            <button class="hold-marker" data-hold="Winterhold" style="--x:74.6%; --y:15.8%;" aria-label="Open Winterhold">
+              <span>Winterhold</span>
+            </button>
+
+            <button class="hold-marker" data-hold="Eastmarch" style="--x:79.6%; --y:37.7%;" aria-label="Open Eastmarch">
+              <span>Eastmarch</span>
+            </button>
+
+            <button class="hold-marker" data-hold="The Rift" style="--x:90.9%; --y:86.4%;" aria-label="Open The Rift">
+              <span>The Rift</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="info-panel" aria-live="polite">
+        <div class="info-heading">
+          <p class="eyebrow">Selected Hold</p>
+          <h2 id="holdName">Whiterun</h2>
+          <span class="owner-badge neutral" id="ownerBadge">Neutral</span>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>Current Owner</h3>
+            <p id="owner">Neutral</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Jarl</h3>
+            <p id="jarl">Balgruuf the Greater</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Status</h3>
+            <p id="status">Watching the war</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Military Strength</h3>
+            <p id="strength" class="strength">★★★★★</p>
+          </article>
+        </div>
+
+        <article class="notes-card">
+          <h3>Campaign Notes</h3>
+          <p id="description">
+            Whiterun controls the centre of Skyrim and remains a decisive strategic prize.
+          </p>
+        </article>
+      </aside>
+    </section>
+
+    <section class="legend-section">
+      <h2>Campaign Legend</h2>
+
+      <div class="legend-grid">
+        <div class="legend-item"><span class="swatch empire"></span>Imperial Legion</div>
+        <div class="legend-item"><span class="swatch stormcloaks"></span>Stormcloaks</div>
+        <div class="legend-item"><span class="swatch neutral"></span>Neutral</div>
+        <div class="legend-item"><span class="swatch contested"></span>Contested</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Vengeful Realms Civil War Map
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
