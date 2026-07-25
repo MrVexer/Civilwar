@@ -120,8 +120,8 @@ const castles = {
     },
 
       "Fort Sungard": {
-        owner: "Stormcloaks",
-        commander: "TBD",
+        owner: "Empire",
+        commander: "Vexor The Adventurer",
         garrison: 42,
         supplies: "High",
         status: "Operational",
