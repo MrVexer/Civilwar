@@ -166,6 +166,16 @@ filterButtons.forEach(button => {
   });
 });
 
+document.querySelectorAll(".castle-hotspot").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        showCastle(button.dataset.castle);
+
+    });
+
+});
+
 // Simple map zoom and drag controls.
 const mapViewport = document.getElementById("mapViewport");
 const mapStage = document.getElementById("mapStage");
