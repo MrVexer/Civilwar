@@ -328,11 +328,21 @@ filterButtons.forEach(button => {
   });
 });
 
-document.querySelectorAll(".castle-hotspot").forEach(button => {
+const castleButtons = [...document.querySelectorAll(".castle-hotspot")];
+
+castleButtons.forEach(button => {
+
+    const castle = castles[button.dataset.castle];
+
+    if (castle) {
+        button.dataset.owner = castle.owner;
+    }
 
     button.addEventListener("click", () => {
-
         showCastle(button.dataset.castle);
+    });
+
+});
 
     });
 
