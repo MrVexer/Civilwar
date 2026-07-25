@@ -180,11 +180,7 @@ const castles = {
         supplies: "High",
         status: "Operational",
         description: "TBD."
-    },
-
   }
-  
-
 };
 
 function showCastle(name) {
