@@ -88,7 +88,7 @@ button {
 
     padding: 0;
 
-    background: rgba(70, 15, 15, 0.75);
+    background: var(--marker-colour);
 
     border: 2px solid #D7C796;
 
@@ -101,6 +101,22 @@ button {
     box-shadow:
         0 0 0 2px rgba(9, 3, 2, 0.75),
         0 0 8px rgba(215, 199, 150, 0.5);
+
+  .castle-hotspot[data-owner="Empire"]{
+    --marker-colour: var(--empire);
+}
+
+.castle-hotspot[data-owner="Stormcloaks"]{
+    --marker-colour: var(--stormcloaks);
+}
+
+.castle-hotspot[data-owner="Neutral"]{
+    --marker-colour: var(--neutral);
+}
+
+.castle-hotspot[data-owner="Contested"]{
+    --marker-colour: var(--contested);
+}
 }
 
 .castle-hotspot:hover,
