@@ -82,69 +82,69 @@ button {
     position: absolute;
 
     width: 18px;
-    height: 18px;
+    height: 22px;
 
     transform: translate(-50%, -50%);
 
-    background: #460F0F;
+    padding: 0;
+
+    background: rgba(70, 15, 15, 0.75);
 
     border: 2px solid #D7C796;
 
-    border-radius: 50%;
+    border-radius: 5px;
 
     cursor: pointer;
 
     z-index: 25;
 
     box-shadow:
-        0 0 0 3px rgba(9, 3, 2, 0.75),
-        0 0 10px rgba(215, 199, 150, 0.55);
+        0 0 0 2px rgba(9, 3, 2, 0.75),
+        0 0 8px rgba(215, 199, 150, 0.5);
 }
 
-.castle-hotspot:hover {
+.castle-hotspot:hover,
+.castle-hotspot:focus-visible {
     transform: translate(-50%, -50%) scale(1.25);
 
     background: #D7C796;
-
-    border-color: #ffffff;
+    border-color: white;
 
     box-shadow:
-        0 0 18px #D7C796,
-        0 0 28px rgba(215, 199, 150, 0.65);
+        0 0 14px #D7C796,
+        0 0 24px rgba(215, 199, 150, 0.65);
+
+    outline: none;
 }
 
 .castle-hotspot::after {
     content: attr(data-location);
 
     position: absolute;
-
-    bottom: 135%;
     left: 50%;
+    bottom: calc(100% + 8px);
 
     transform: translateX(-50%);
 
-    background: rgba(9, 3, 2, 0.96);
-
-    color: #D7C796;
-
-    border: 1px solid #8F7634;
-
-    border-radius: 6px;
-
     padding: 4px 8px;
 
-    font-size: 12px;
+    border: 1px solid #8F7634;
+    border-radius: 5px;
 
+    background: rgba(9, 3, 2, 0.96);
+    color: #D7C796;
+
+    font-size: 12px;
     white-space: nowrap;
 
     opacity: 0;
-
     pointer-events: none;
 
-    transition: 0.2s;
+    transition: opacity 0.2s ease;
 }
 
-.castle-hotspot:hover::after {
+.castle-hotspot:hover::after,
+.castle-hotspot:focus-visible::after {
     opacity: 1;
 }
 
