@@ -340,6 +340,7 @@ castleButtons.forEach(button => {
 
     button.addEventListener("click", () => {
         showCastle(button.dataset.castle);
+    });
 
 });
 
