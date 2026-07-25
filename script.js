@@ -40,7 +40,7 @@ const holds = {
   },
 
   "The Pale": {
-    owner: "Stormcloaks",
+    owner: "Empire",
     jarl: "Skald the Elder",
     status: "Fortified",
     strength: "★★★★☆",
@@ -84,7 +84,7 @@ const castles = {
     },
 
     "Fort Dunstad": {
-        owner: "Stormcloaks",
+        owner: "Empire",
         commander: "Captain Hrolf",
         garrison: 35,
         supplies: "Medium",
