@@ -74,6 +74,78 @@ button {
   font-size: 1.05rem;
 }
 
+/* ===========================
+   Castle Hotspots
+=========================== */
+
+.castle-hotspot{
+
+    position:absolute;
+
+    width:24px;
+    height:24px;
+
+    transform:translate(-50%,-50%);
+
+    background:transparent;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    z-index:25;
+
+}
+
+.castle-hotspot:hover{
+
+    box-shadow:
+        0 0 18px #D7C796,
+        inset 0 0 10px rgba(215,199,150,.35);
+
+}
+
+.castle-hotspot::after{
+
+    content:attr(data-location);
+
+    position:absolute;
+
+    bottom:125%;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:rgba(9,3,2,.96);
+
+    color:#D7C796;
+
+    border:1px solid #8F7634;
+
+    border-radius:6px;
+
+    padding:4px 8px;
+
+    font-size:12px;
+
+    white-space:nowrap;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.2s;
+
+}
+
+.castle-hotspot:hover::after{
+
+    opacity:1;
+
+}
+
 main {
   width: min(1450px, 96%);
   margin: auto;
