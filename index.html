@@ -1,227 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Skyrim Civil War Map</title>
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<title>Vengeful Realms - Civil War Map</title>
 
 <style>
-html,body{
-    margin:0;
-    height:100%;
-    background:#0f0f0f;
-    font-family:Georgia,serif;
+
+body{
+margin:0;
+font-family:Georgia,serif;
+color:#f5f0df;
+line-height:1.7;
+
+background:
+linear-gradient(rgba(9,3,2,.82),rgba(9,3,2,.90)),
+url("./RealmsBG.png");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 }
 
-#map{
-    width:100%;
-    height:100%;
+header{
+
+background:linear-gradient(135deg,#460F0F,#090302);
+
+padding:45px;
+
+text-align:center;
+
+border-bottom:3px solid #D7C796;
+
 }
 
-#title{
-    position:absolute;
-    top:15px;
-    left:50%;
-    transform:translateX(-50%);
-    z-index:9999;
-    background:rgba(20,20,20,.85);
-    color:white;
-    padding:15px 30px;
-    border-radius:10px;
-    text-align:center;
-    border:2px solid #8b6b32;
+.logo{
+
+width:170px;
+
+display:block;
+
+margin:auto auto 15px;
+
+}
+
+header h1{
+
+margin:0;
+
+color:#D7C796;
+
+font-size:38px;
+
+}
+
+header p{
+
+color:#C5B171;
+
+margin-top:10px;
+
+}
+
+.navbar{
+
+background:#090302;
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+padding:15px;
+
+border-bottom:1px solid #8F7634;
+
+flex-wrap:wrap;
+
+}
+
+.navbar a{
+
+color:#D7C796;
+
+text-decoration:none;
+
+padding:10px 16px;
+
+border-radius:6px;
+
+transition:.2s;
+
+}
+
+.navbar a:hover{
+
+background:#460F0F;
+
+}
+
+main{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:30px;
+
+}
+
+section{
+
+background:rgba(9,3,2,.78);
+
+border:1px solid #8F7634;
+
+border-radius:10px;
+
+padding:22px;
+
+margin-bottom:25px;
+
+}
+
+.notice{
+
+border:2px solid #D7C796;
+
+background:rgba(215,199,150,.08);
+
+}
+
+h2{
+
+color:#D7C796;
+
+margin-top:0;
+
+border-bottom:1px solid #8F7634;
+
+padding-bottom:8px;
+
+}
+
+.map{
+
+text-align:center;
+
+}
+
+.map img{
+
+width:100%;
+
+max-width:900px;
+
+border:2px solid #8F7634;
+
+border-radius:8px;
+
+}
+
+.info-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:20px;
+
+}
+
+.info-card{
+
+background:rgba(70,15,15,.45);
+
+padding:18px;
+
+border-radius:8px;
+
+border:1px solid #8F7634;
+
 }
 
 .legend{
-    position:absolute;
-    bottom:20px;
-    left:20px;
-    z-index:9999;
-    background:rgba(20,20,20,.85);
-    color:white;
-    padding:15px;
-    border-radius:10px;
-    line-height:1.8;
-    border:2px solid #8b6b32;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:15px;
+
 }
 
-.dot{
-    width:15px;
-    height:15px;
-    display:inline-block;
-    border-radius:50%;
-    margin-right:8px;
+.legend div{
+
+background:rgba(70,15,15,.45);
+
+padding:15px;
+
+border-radius:8px;
+
+border:1px solid #8F7634;
+
 }
 
-.leaflet-popup-content{
-    font-family:Georgia;
+footer{
+
+text-align:center;
+
+padding:25px;
+
+color:#AF9B5D;
+
 }
+
 </style>
+
 </head>
 
 <body>
 
-<div id="title">
-<h2>Skyrim Civil War</h2>
-Current Hold Ownership
+<header>
+
+<img src="./logo.png" class="logo">
+
+<h1>Vengeful Realms</h1>
+
+<p>Civil War Campaign Map</p>
+
+</header>
+
+<nav class="navbar">
+
+<a href="https://mrvexer.github.io/VengefulStaffHub/">🏠 Staff Hub</a>
+
+<a href="#">🗺 Civil War</a>
+
+</nav>
+
+<main>
+
+<section class="notice">
+
+<h2>Campaign Overview</h2>
+
+<p>
+
+This page tracks the current state of the Skyrim Civil War.
+
+Hold ownership, military strength, political influence and major conflicts
+will be updated throughout the server's ongoing story.
+
+</p>
+
+</section>
+
+<section class="map">
+
+<h2>Map of Skyrim</h2>
+
+<img src="SkyrimMap.png" alt="Civil War Map">
+
+</section>
+
+<div class="info-grid">
+
+<section class="info-card">
+
+<h2>Selected Hold</h2>
+
+<p><strong>Hold:</strong> Whiterun</p>
+
+<p><strong>Current Owner:</strong> Empire</p>
+
+<p><strong>Jarl:</strong> Balgruuf</p>
+
+<p><strong>Military Strength:</strong> ★★★★☆</p>
+
+<p><strong>Status:</strong> Peaceful</p>
+
+<p><strong>Last Battle:</strong> None</p>
+
+<p><strong>Notes:</strong></p>
+
+<p>
+
+Whiterun remains loyal to the Empire and continues
+to act as the central trade hub of Skyrim.
+
+</p>
+
+</section>
+
+<section class="info-card">
+
+<h2>Campaign Statistics</h2>
+
+<p>Empire Holds: 5</p>
+
+<p>Stormcloak Holds: 4</p>
+
+<p>Independent Holds: 0</p>
+
+<p>Contested Holds: 0</p>
+
+<p>Total Battles: 12</p>
+
+<p>Campaign Day: 47</p>
+
+</section>
+
 </div>
+
+<section>
+
+<h2>Legend</h2>
 
 <div class="legend">
-<div><span class="dot" style="background:#0b66ff;"></span>Imperial</div>
-<div><span class="dot" style="background:#d62828;"></span>Stormcloak</div>
-<div><span class="dot" style="background:#7b2cbf;"></span>Contested</div>
+
+<div>🟥 Empire</div>
+
+<div>🟦 Stormcloaks</div>
+
+<div>🟨 Independent</div>
+
+<div>⬛ Contested</div>
+
+<div>🟪 Thalmor</div>
+
+<div>🟩 Player Controlled</div>
+
 </div>
 
-<div id="map"></div>
+</section>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</main>
 
-<script>
+<footer>
 
-const imageWidth = 3000;
-const imageHeight = 2000;
+Vengeful Realms Civil War Campaign
 
-const map = L.map('map',{
-    crs:L.CRS.Simple,
-    minZoom:-2,
-    maxZoom:2
-});
-
-const bounds = [
-    [0,0],
-    [imageHeight,imageWidth]
-];
-
-L.imageOverlay('skyrim-map.jpg',bounds).addTo(map);
-
-map.fitBounds(bounds);
-
-const holds = [
-
-{
-name:"Haafingar",
-capital:"Solitude",
-owner:"Imperial",
-jarl:"Elisif the Fair",
-status:"Stable",
-x:850,
-y:250
-},
-
-{
-name:"Hjaalmarch",
-capital:"Morthal",
-owner:"Imperial",
-jarl:"Idgrod Ravencrone",
-status:"Stable",
-x:1100,
-y:500
-},
-
-{
-name:"The Reach",
-capital:"Markarth",
-owner:"Imperial",
-jarl:"Igmund",
-status:"Stable",
-x:350,
-y:1050
-},
-
-{
-name:"Whiterun",
-capital:"Whiterun",
-owner:"Contested",
-jarl:"Balgruuf",
-status:"Battlefront",
-x:1500,
-y:1050
-},
-
-{
-name:"Falkreath",
-capital:"Falkreath",
-owner:"Imperial",
-jarl:"Siddgeir",
-status:"Stable",
-x:800,
-y:1700
-},
-
-{
-name:"The Pale",
-capital:"Dawnstar",
-owner:"Stormcloak",
-jarl:"Skald",
-status:"Stable",
-x:1700,
-y:300
-},
-
-{
-name:"Winterhold",
-capital:"Winterhold",
-owner:"Stormcloak",
-jarl:"Korir",
-status:"Stable",
-x:2400,
-y:350
-},
-
-{
-name:"Eastmarch",
-capital:"Windhelm",
-owner:"Stormcloak",
-jarl:"Ulfric Stormcloak",
-status:"Capital",
-x:2700,
-y:800
-},
-
-{
-name:"The Rift",
-capital:"Riften",
-owner:"Stormcloak",
-jarl:"Laila Law-Giver",
-status:"Stable",
-x:2450,
-y:1700
-}
-
-];
-
-holds.forEach(hold=>{
-
-let color="#7b2cbf";
-
-if(hold.owner==="Imperial") color="#0b66ff";
-if(hold.owner==="Stormcloak") color="#d62828";
-
-L.circleMarker(
-    [hold.y,hold.x],
-    {
-        radius:10,
-        color:color,
-        fillColor:color,
-        fillOpacity:1,
-        weight:2
-    }
-)
-.addTo(map)
-.bindPopup(`
-<h2>${hold.name}</h2>
-<b>Capital:</b> ${hold.capital}<br>
-<b>Owner:</b> ${hold.owner}<br>
-<b>Jarl:</b> ${hold.jarl}<br>
-<b>Status:</b> ${hold.status}
-`);
-
-});
-
-</script>
+</footer>
 
 </body>
+
 </html>
