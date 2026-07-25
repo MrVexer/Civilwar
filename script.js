@@ -41,7 +41,7 @@ const holds = {
 
   "The Pale": {
     owner: "Empire",
-    jarl: "Skald the Elder",
+    jarl: "Valion The Ass",
     status: "Fortified",
     strength: "★★★★☆",
     description: "Dawnstar provides a northern port and access to the Sea of Ghosts. Harsh weather makes extended campaigns difficult."
