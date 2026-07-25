@@ -191,6 +191,9 @@ function showCastle(name) {
         return;
     }
 
+        // Change the panel title
+    document.querySelector(".eyebrow").textContent = "Selected Fort";
+
     // Main heading
     holdName.textContent = name;
 
@@ -262,6 +265,28 @@ function selectHold(name) {
     return;
   }
 
+  document.querySelector("#owner")
+    .closest(".info-card")
+    .querySelector("h3").textContent = "Current Owner";
+
+document.querySelector("#jarl")
+    .closest(".info-card")
+    .querySelector("h3").textContent = "Jarl";
+
+document.querySelector("#status")
+    .closest(".info-card")
+    .querySelector("h3").textContent = "Status";
+
+document.querySelector("#strength")
+    .closest(".info-card")
+    .querySelector("h3").textContent = "Military Strength";
+
+document.querySelector("#description")
+    .closest(".notes-card")
+    .querySelector("h3").textContent = "Campaign Notes";
+
+document.querySelector(".eyebrow").textContent = "Selected Hold";
+  
   holdName.textContent = name;
   owner.textContent = hold.owner;
   jarl.textContent = hold.jarl;
