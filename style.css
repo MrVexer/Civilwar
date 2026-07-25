@@ -78,72 +78,74 @@ button {
    Castle Hotspots
 =========================== */
 
-.castle-hotspot{
+.castle-hotspot {
+    position: absolute;
 
-    position:absolute;
+    width: 18px;
+    height: 18px;
 
-    width:24px;
-    height:24px;
+    transform: translate(-50%, -50%);
 
-    transform:translate(-50%,-50%);
+    background: #460F0F;
 
-    background:transparent;
+    border: 2px solid #D7C796;
 
-    border:none;
+    border-radius: 50%;
 
-    border-radius:50%;
+    cursor: pointer;
 
-    cursor:pointer;
+    z-index: 25;
 
-    z-index:25;
-
+    box-shadow:
+        0 0 0 3px rgba(9, 3, 2, 0.75),
+        0 0 10px rgba(215, 199, 150, 0.55);
 }
 
-.castle-hotspot:hover{
+.castle-hotspot:hover {
+    transform: translate(-50%, -50%) scale(1.25);
+
+    background: #D7C796;
+
+    border-color: #ffffff;
 
     box-shadow:
         0 0 18px #D7C796,
-        inset 0 0 10px rgba(215,199,150,.35);
-
+        0 0 28px rgba(215, 199, 150, 0.65);
 }
 
-.castle-hotspot::after{
+.castle-hotspot::after {
+    content: attr(data-location);
 
-    content:attr(data-location);
+    position: absolute;
 
-    position:absolute;
+    bottom: 135%;
+    left: 50%;
 
-    bottom:125%;
-    left:50%;
+    transform: translateX(-50%);
 
-    transform:translateX(-50%);
+    background: rgba(9, 3, 2, 0.96);
 
-    background:rgba(9,3,2,.96);
+    color: #D7C796;
 
-    color:#D7C796;
+    border: 1px solid #8F7634;
 
-    border:1px solid #8F7634;
+    border-radius: 6px;
 
-    border-radius:6px;
+    padding: 4px 8px;
 
-    padding:4px 8px;
+    font-size: 12px;
 
-    font-size:12px;
+    white-space: nowrap;
 
-    white-space:nowrap;
+    opacity: 0;
 
-    opacity:0;
+    pointer-events: none;
 
-    pointer-events:none;
-
-    transition:.2s;
-
+    transition: 0.2s;
 }
 
-.castle-hotspot:hover::after{
-
-    opacity:1;
-
+.castle-hotspot:hover::after {
+    opacity: 1;
 }
 
 main {
