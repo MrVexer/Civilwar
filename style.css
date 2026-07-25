@@ -458,6 +458,18 @@ footer{
 
     flex-wrap:wrap;
 
+   /* Selected Hold */
+
+.hold.selected{
+
+    background:rgba(215,199,150,.35);
+
+    border:2px solid #D7C796;
+
+    box-shadow:0 0 20px #D7C796;
+
+}
+
 }
 
 }
