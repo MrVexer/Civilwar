@@ -357,9 +357,13 @@ zoomOut.addEventListener("click", () => {
 resetView.addEventListener("click", resetMapView);
 
 mapViewport.addEventListener("pointerdown", event => {
-  if (scale <= 1 || event.target.closest(".hold-marker")) {
+  if (
+    scale <= 1 ||
+    event.target.closest(".hold-marker") ||
+    event.target.closest(".castle-hotspot")
+) {
     return;
-  }
+}
 
   isDragging = true;
   dragStartX = event.clientX - translateX;
@@ -376,12 +380,6 @@ mapViewport.addEventListener("pointermove", event => {
   translateX = event.clientX - dragStartX;
   translateY = event.clientY - dragStartY;
   applyTransform();
-});
-
-document.querySelectorAll(".castle-hotspot").forEach(button => {
-    button.addEventListener("click", () => {
-        showCastle(button.dataset.castle);
-    });
 });
 
 function stopDragging(event) {
