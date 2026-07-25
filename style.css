@@ -1,0 +1,463 @@
+/* ===========================
+   Vengeful Realms Theme
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Georgia, serif;
+    color:#f5f0df;
+
+    background:
+    linear-gradient(rgba(9,3,2,.82),rgba(9,3,2,.90)),
+    url("background2.png");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header{
+
+    text-align:center;
+
+    padding:40px;
+
+    background:linear-gradient(135deg,#460F0F,#090302);
+
+    border-bottom:3px solid #D7C796;
+
+}
+
+.logo{
+
+    width:170px;
+    margin-bottom:15px;
+
+}
+
+header h1{
+
+    color:#D7C796;
+    font-size:40px;
+
+}
+
+header p{
+
+    color:#C5B171;
+    margin-top:10px;
+
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+.navbar{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+
+    background:#1a0808;
+
+    padding:15px;
+
+    border-bottom:1px solid #8F7634;
+
+}
+
+.navbar a{
+
+    text-decoration:none;
+
+    color:#D7C796;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+.navbar a:hover{
+
+    color:white;
+
+}
+
+/* ===========================
+   Main Layout
+=========================== */
+
+main{
+
+    width:95%;
+    max-width:1500px;
+
+    margin:auto;
+
+    padding:30px;
+
+}
+
+.mapContainer{
+
+    display:flex;
+
+    gap:25px;
+
+    align-items:flex-start;
+
+}
+
+/* ===========================
+   Map
+=========================== */
+
+.mapArea{
+
+    position:relative;
+
+    width:100%;
+
+    flex:3;
+
+}
+
+#map{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:10px;
+
+    border:2px solid #8F7634;
+
+    box-shadow:0 0 25px rgba(0,0,0,.6);
+
+}
+
+/* ===========================
+   Clickable Holds
+=========================== */
+
+.hold{
+
+    position:absolute;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    border-radius:12px;
+
+}
+
+.hold:hover{
+
+    background:rgba(215,199,150,.25);
+
+    box-shadow:0 0 20px #D7C796;
+
+}
+
+/* ===========================
+   Hold Positions
+=========================== */
+
+/* Haafingar */
+
+#haafingar{
+
+    left:4%;
+    top:2%;
+    width:24%;
+    height:23%;
+
+}
+
+/* Hjaalmarch */
+
+#hjaalmarch{
+
+    left:20%;
+    top:18%;
+    width:36%;
+    height:24%;
+
+}
+
+/* Reach */
+
+#reach{
+
+    left:0%;
+    top:22%;
+    width:28%;
+    height:45%;
+
+}
+
+/* Whiterun */
+
+#whiterun{
+
+    left:30%;
+    top:42%;
+    width:38%;
+    height:28%;
+
+}
+
+/* Falkreath */
+
+#falkreath{
+
+    left:26%;
+    top:70%;
+    width:32%;
+    height:22%;
+
+}
+
+/* Pale */
+
+#pale{
+
+    left:53%;
+    top:11%;
+    width:26%;
+    height:34%;
+
+}
+
+/* Winterhold */
+
+#winterhold{
+
+    left:70%;
+    top:6%;
+    width:28%;
+    height:32%;
+
+}
+
+/* Eastmarch */
+
+#eastmarch{
+
+    left:71%;
+    top:34%;
+    width:28%;
+    height:40%;
+
+}
+
+/* Rift */
+
+#rift{
+
+    left:61%;
+    top:72%;
+    width:39%;
+    height:25%;
+
+}
+
+/* ===========================
+   Info Panel
+=========================== */
+
+.infoPanel{
+
+    flex:1;
+
+    background:rgba(9,3,2,.82);
+
+    border:1px solid #8F7634;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    position:sticky;
+
+    top:20px;
+
+}
+
+.infoPanel h2{
+
+    color:#D7C796;
+
+    margin-bottom:15px;
+
+}
+
+.infoPanel hr{
+
+    border:none;
+
+    border-top:1px solid #8F7634;
+
+    margin-bottom:20px;
+
+}
+
+.infoBox{
+
+    margin-bottom:18px;
+
+}
+
+.infoBox h3{
+
+    color:#C5B171;
+
+    margin-bottom:5px;
+
+}
+
+.infoBox p{
+
+    color:#f5f0df;
+
+}
+
+/* ===========================
+   Legend
+=========================== */
+
+.legend{
+
+    margin-top:40px;
+
+    background:rgba(9,3,2,.80);
+
+    border:1px solid #8F7634;
+
+    border-radius:10px;
+
+    padding:20px;
+
+}
+
+.legend h2{
+
+    color:#D7C796;
+
+    margin-bottom:20px;
+
+}
+
+.legendGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:20px;
+
+}
+
+.legendItem{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.colour{
+
+    width:24px;
+
+    height:24px;
+
+    border-radius:5px;
+
+    border:1px solid black;
+
+}
+
+.empire{
+
+    background:#b02a2a;
+
+}
+
+.stormcloak{
+
+    background:#2d67b2;
+
+}
+
+.contested{
+
+    background:#d6b339;
+
+}
+
+.neutral{
+
+    background:#6f6f6f;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#AF9B5D;
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:1100px){
+
+.mapContainer{
+
+    flex-direction:column;
+
+}
+
+.infoPanel{
+
+    width:100%;
+
+    position:relative;
+
+    top:0;
+
+}
+
+.navbar{
+
+    flex-wrap:wrap;
+
+}
+
+}
