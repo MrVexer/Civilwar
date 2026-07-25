@@ -72,6 +72,37 @@ const holds = {
   }
 };
 
+const castles = {
+
+    "Fort Greymoor": {
+        owner: "Empire",
+        commander: "Legate Rikke",
+        garrison: 48,
+        supplies: "High",
+        status: "Fortified",
+        description: "Protects the western approaches to Whiterun."
+    },
+
+    "Fort Dunstad": {
+        owner: "Stormcloaks",
+        commander: "Captain Hrolf",
+        garrison: 35,
+        supplies: "Medium",
+        status: "Under Watch",
+        description: "Controls the road to Dawnstar."
+    },
+
+    "Fort Snowhawk": {
+        owner: "Empire",
+        commander: "Legate Fasendil",
+        garrison: 42,
+        supplies: "High",
+        status: "Operational",
+        description: "Protects Hjaalmarch."
+    }
+
+};
+
 const holdName = document.getElementById("holdName");
 const owner = document.getElementById("owner");
 const jarl = document.getElementById("jarl");
