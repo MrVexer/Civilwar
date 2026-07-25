@@ -30,7 +30,7 @@ body {
   background:
     radial-gradient(circle at top, rgba(70, 15, 15, 0.28), transparent 42rem),
     linear-gradient(rgba(9, 3, 2, 0.88), rgba(9, 3, 2, 0.96)),
-    url("RealmsBG.png");
+    url("background2.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
