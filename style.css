@@ -79,89 +79,40 @@ button {
 =========================== */
 
 .castle-hotspot {
-    position: absolute;
+    --marker-colour: var(--neutral);
 
+    position: absolute;
     width: 18px;
     height: 22px;
-
     transform: translate(-50%, -50%);
-
     padding: 0;
 
     background: var(--marker-colour);
 
     border: 2px solid #D7C796;
-
     border-radius: 5px;
-
     cursor: pointer;
-
     z-index: 25;
 
     box-shadow:
         0 0 0 2px rgba(9, 3, 2, 0.75),
         0 0 8px rgba(215, 199, 150, 0.5);
+}
 
-  .castle-hotspot[data-owner="Empire"]{
+.castle-hotspot[data-owner="Empire"] {
     --marker-colour: var(--empire);
 }
 
-.castle-hotspot[data-owner="Stormcloaks"]{
+.castle-hotspot[data-owner="Stormcloaks"] {
     --marker-colour: var(--stormcloaks);
 }
 
-.castle-hotspot[data-owner="Neutral"]{
+.castle-hotspot[data-owner="Neutral"] {
     --marker-colour: var(--neutral);
 }
 
-.castle-hotspot[data-owner="Contested"]{
+.castle-hotspot[data-owner="Contested"] {
     --marker-colour: var(--contested);
-}
-}
-
-.castle-hotspot:hover,
-.castle-hotspot:focus-visible {
-    transform: translate(-50%, -50%) scale(1.25);
-
-    background: #D7C796;
-    border-color: white;
-
-    box-shadow:
-        0 0 14px #D7C796,
-        0 0 24px rgba(215, 199, 150, 0.65);
-
-    outline: none;
-}
-
-.castle-hotspot::after {
-    content: attr(data-location);
-
-    position: absolute;
-    left: 50%;
-    bottom: calc(100% + 8px);
-
-    transform: translateX(-50%);
-
-    padding: 4px 8px;
-
-    border: 1px solid #8F7634;
-    border-radius: 5px;
-
-    background: rgba(9, 3, 2, 0.96);
-    color: #D7C796;
-
-    font-size: 12px;
-    white-space: nowrap;
-
-    opacity: 0;
-    pointer-events: none;
-
-    transition: opacity 0.2s ease;
-}
-
-.castle-hotspot:hover::after,
-.castle-hotspot:focus-visible::after {
-    opacity: 1;
 }
 
 main {
