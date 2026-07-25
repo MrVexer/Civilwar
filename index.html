@@ -4,222 +4,11 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vengeful Realms - Civil War Map</title>
+<title>Vengeful Realms | Civil War Map</title>
 
-<style>
-
-body{
-margin:0;
-font-family:Georgia,serif;
-color:#f5f0df;
-line-height:1.7;
-
-background:
-linear-gradient(rgba(9,3,2,.82),rgba(9,3,2,.90)),
-url("./background2.png");
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-}
-
-header{
-
-background:linear-gradient(135deg,#460F0F,#090302);
-
-padding:45px;
-
-text-align:center;
-
-border-bottom:3px solid #D7C796;
-
-}
-
-.logo{
-
-width:170px;
-
-display:block;
-
-margin:auto auto 15px;
-
-}
-
-header h1{
-
-margin:0;
-
-color:#D7C796;
-
-font-size:38px;
-
-}
-
-header p{
-
-color:#C5B171;
-
-margin-top:10px;
-
-}
-
-.navbar{
-
-background:#090302;
-
-display:flex;
-
-justify-content:center;
-
-gap:15px;
-
-padding:15px;
-
-border-bottom:1px solid #8F7634;
-
-flex-wrap:wrap;
-
-}
-
-.navbar a{
-
-color:#D7C796;
-
-text-decoration:none;
-
-padding:10px 16px;
-
-border-radius:6px;
-
-transition:.2s;
-
-}
-
-.navbar a:hover{
-
-background:#460F0F;
-
-}
-
-main{
-
-max-width:1200px;
-
-margin:auto;
-
-padding:30px;
-
-}
-
-section{
-
-background:rgba(9,3,2,.78);
-
-border:1px solid #8F7634;
-
-border-radius:10px;
-
-padding:22px;
-
-margin-bottom:25px;
-
-}
-
-.notice{
-
-border:2px solid #D7C796;
-
-background:rgba(215,199,150,.08);
-
-}
-
-h2{
-
-color:#D7C796;
-
-margin-top:0;
-
-border-bottom:1px solid #8F7634;
-
-padding-bottom:8px;
-
-}
-
-.map{
-
-text-align:center;
-
-}
-
-.map img{
-
-width:100%;
-
-max-width:900px;
-
-border:2px solid #8F7634;
-
-border-radius:8px;
-
-}
-
-.info-grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:20px;
-
-}
-
-.info-card{
-
-background:rgba(70,15,15,.45);
-
-padding:18px;
-
-border-radius:8px;
-
-border:1px solid #8F7634;
-
-}
-
-.legend{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:15px;
-
-}
-
-.legend div{
-
-background:rgba(70,15,15,.45);
-
-padding:15px;
-
-border-radius:8px;
-
-border:1px solid #8F7634;
-
-}
-
-footer{
-
-text-align:center;
-
-padding:25px;
-
-color:#AF9B5D;
-
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -227,105 +16,180 @@ color:#AF9B5D;
 
 <header>
 
-<img src="./Vengefullogo.png" class="logo">
+<img src="logo.png" class="logo">
 
 <h1>Vengeful Realms</h1>
 
-<p>Civil War Campaign Map</p>
+<p>Interactive Skyrim Civil War Map</p>
 
 </header>
 
+<nav class="navbar">
+
+<a href="#">Home</a>
+
+<a href="#">Legend</a>
+
+<a href="#">Campaign</a>
+
+<a href="#">Timeline</a>
+
+</nav>
+
 <main>
 
-<section class="notice">
+<div class="mapContainer">
 
-<h2>Campaign Overview</h2>
+<div class="mapArea">
 
-<p>
+<img src="SkyrimMap.png" id="map">
 
-This page tracks the current state of the Skyrim Civil War.
+<!-- HAAFINGAR -->
+<div class="hold"
+id="haafingar"
+onclick="selectHold('Haafingar')"></div>
 
-Hold ownership, military strength, political influence and major conflicts
-will be updated throughout the server's ongoing story.
+<!-- HJAALMARCH -->
+<div class="hold"
+id="hjaalmarch"
+onclick="selectHold('Hjaalmarch')"></div>
 
-</p>
+<!-- THE REACH -->
+<div class="hold"
+id="reach"
+onclick="selectHold('The Reach')"></div>
 
-</section>
+<!-- WHITERUN -->
+<div class="hold"
+id="whiterun"
+onclick="selectHold('Whiterun')"></div>
 
-<section class="map">
+<!-- FALKREATH -->
+<div class="hold"
+id="falkreath"
+onclick="selectHold('Falkreath')"></div>
 
-<h2>Map of Skyrim</h2>
+<!-- THE PALE -->
+<div class="hold"
+id="pale"
+onclick="selectHold('The Pale')"></div>
 
-<img src="skyrim-map.jpg" alt="Civil War Map">
+<!-- WINTERHOLD -->
+<div class="hold"
+id="winterhold"
+onclick="selectHold('Winterhold')"></div>
 
-</section>
+<!-- EASTMARCH -->
+<div class="hold"
+id="eastmarch"
+onclick="selectHold('Eastmarch')"></div>
 
-<div class="info-grid">
-
-<section class="info-card">
-
-<h2>Selected Hold</h2>
-
-<p><strong>Hold:</strong> Whiterun</p>
-
-<p><strong>Current Owner:</strong> Empire</p>
-
-<p><strong>Jarl:</strong> Balgruuf</p>
-
-<p><strong>Military Strength:</strong> ★★★★☆</p>
-
-<p><strong>Status:</strong> Peaceful</p>
-
-<p><strong>Last Battle:</strong> None</p>
-
-<p><strong>Notes:</strong></p>
-
-<p>
-
-Whiterun remains loyal to the Empire and continues
-to act as the central trade hub of Skyrim.
-
-</p>
-
-</section>
-
-<section class="info-card">
-
-<h2>Campaign Statistics</h2>
-
-<p>Empire Holds: 5</p>
-
-<p>Stormcloak Holds: 4</p>
-
-<p>Independent Holds: 0</p>
-
-<p>Contested Holds: 0</p>
-
-<p>Total Battles: 12</p>
-
-<p>Campaign Day: 47</p>
-
-</section>
+<!-- THE RIFT -->
+<div class="hold"
+id="rift"
+onclick="selectHold('The Rift')"></div>
 
 </div>
 
-<section>
+<aside class="infoPanel">
+
+<h2 id="holdName">
+Select a Hold
+</h2>
+
+<hr>
+
+<div class="infoBox">
+
+<h3>Current Owner</h3>
+
+<p id="owner">
+-
+</p>
+
+</div>
+
+<div class="infoBox">
+
+<h3>Jarl</h3>
+
+<p id="jarl">
+-
+</p>
+
+</div>
+
+<div class="infoBox">
+
+<h3>Status</h3>
+
+<p id="status">
+-
+</p>
+
+</div>
+
+<div class="infoBox">
+
+<h3>Military Strength</h3>
+
+<p id="strength">
+-
+</p>
+
+</div>
+
+<div class="infoBox">
+
+<h3>Description</h3>
+
+<p id="description">
+Select one of the nine holds to display information.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+<section class="legend">
 
 <h2>Legend</h2>
 
-<div class="legend">
+<div class="legendGrid">
 
-<div>🟥 Empire</div>
+<div class="legendItem">
 
-<div>🟦 Stormcloaks</div>
+<div class="colour empire"></div>
 
-<div>🟨 Independent</div>
+Empire
 
-<div>⬛ Contested</div>
+</div>
 
-<div>🟪 Thalmor</div>
+<div class="legendItem">
 
-<div>🟩 Player Controlled</div>
+<div class="colour stormcloak"></div>
+
+Stormcloaks
+
+</div>
+
+<div class="legendItem">
+
+<div class="colour contested"></div>
+
+Contested
+
+</div>
+
+<div class="legendItem">
+
+<div class="colour neutral"></div>
+
+Neutral
+
+</div>
 
 </div>
 
@@ -335,9 +199,11 @@ to act as the central trade hub of Skyrim.
 
 <footer>
 
-Vengeful Realms Civil War Campaign
+Vengeful Realms Civil War Map
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 
