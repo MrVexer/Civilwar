@@ -182,14 +182,6 @@ const castles = {
         description: "TBD."
     },
 
-      "Fort Snowhawk": {
-        owner: "Empire",
-        commander: "Legate Fasendil",
-        garrison: 42,
-        supplies: "High",
-        status: "Operational",
-        description: "Protects Hjaalmarch."
-    },
   }
   
 
