@@ -298,6 +298,12 @@ mapViewport.addEventListener("pointermove", event => {
   applyTransform();
 });
 
+document.querySelectorAll(".castle-hotspot").forEach(button => {
+    button.addEventListener("click", () => {
+        showCastle(button.dataset.castle);
+    });
+});
+
 function stopDragging(event) {
   if (!isDragging) {
     return;
