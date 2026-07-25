@@ -92,14 +92,106 @@ const castles = {
         description: "Controls the road to Dawnstar."
     },
 
-    "Fort Snowhawk": {
+    "Northwatch Keep": {
+        owner: "Empire",
+        commander: "Legate Fasendil",
+        garrison: 42,
+        supplies: "High",
+        status: "Operational",
+        description: "Its primary operational responsibility is detaining, interrogating, and holding political prisoners."
+    },
+
+      "Fort Hraggstad": {
+        owner: "Empire",
+        commander: "Legate Fasendil",
+        garrison: 42,
+        supplies: "High",
+        status: "Operational",
+        description: "Imperial Legion training grounds."
+    },
+
+      "Broken Tower Redoubt": {
+        owner: "Empire",
+        commander: "Legate Fasendil",
+        garrison: 42,
+        supplies: "High",
+        status: "Operational",
+        description: "TBD."
+    },
+
+      "Fort Sungard": {
+        owner: "Stormcloaks",
+        commander: "TBD",
+        garrison: 42,
+        supplies: "High",
+        status: "Operational",
+        description: "TBD."
+    },
+
+      "Cracked Tusk Keep": {
+        owner: "Empire",
+        commander: "Legate Fasendil",
+        garrison: 42,
+        supplies: "High",
+        status: "Operational",
+        description: "TBD."
+    },
+
+      "Fellglow Keep": {
+        owner: "Stormcloaks",
+        commander: "StormChud",
+        garrison: 42,
+        supplies: "High",
+        status: "Operational",
+        description: "TBD."
+    },
+
+      "Fort Amol": {
+        owner: "Stormcloaks",
+        commander: "StormChud",
+        garrison: 42,
+        supplies: "High",
+        status: "Operational",
+        description: "TBD."
+    },
+
+      "Mistwatch": {
+        owner: "Stormcloaks",
+        commander: "StormChud",
+        garrison: 42,
+        supplies: "High",
+        status: "Operational",
+        description: "TBD."
+    },
+
+      "Fort Greenwall": {
+        owner: "Stormcloaks",
+        commander: "StormChud",
+        garrison: 42,
+        supplies: "High",
+        status: "Operational",
+        description: "TBD."
+    },
+
+      "Faldar's Tooth": {
+        owner: "Stormcloaks",
+        commander: "StormChud",
+        garrison: 42,
+        supplies: "High",
+        status: "Operational",
+        description: "TBD."
+    },
+
+      "Fort Snowhawk": {
         owner: "Empire",
         commander: "Legate Fasendil",
         garrison: 42,
         supplies: "High",
         status: "Operational",
         description: "Protects Hjaalmarch."
-    }
+    },
+  }
+  
 
 };
 
