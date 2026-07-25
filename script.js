@@ -228,6 +228,13 @@ function showCastle(name) {
     // Update the owner badge
     ownerBadge.textContent = castle.owner;
     ownerBadge.className = `owner-badge ${ownerClass(castle.owner)}`;
+  const castleButton = castleButtons.find(
+    b => b.dataset.castle === name
+);
+
+if (castleButton) {
+    castleButton.dataset.owner = castle.owner;
+}
 
     // Remove selection from the large hold markers
     markers.forEach(marker => {
@@ -296,6 +303,10 @@ document.querySelector(".eyebrow").textContent = "Selected Hold";
 
   ownerBadge.textContent = hold.owner;
   ownerBadge.className = `owner-badge ${ownerClass(hold.owner)}`;
+  const marker = markers.find(m => m.dataset.hold === name);
+if (marker) {
+    marker.dataset.owner = hold.owner;
+}
 
   markers.forEach(marker => {
     marker.classList.toggle("selected", marker.dataset.hold === name);
