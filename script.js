@@ -442,7 +442,7 @@ mapViewport.addEventListener("pointercancel", stopDragging);
 
 selectHold("Whiterun");
 
-const backgroundMusic = document.getElementById("backgroundMusic");
+const backgroundMusic = document.getElementById("background-music.mp3");
 const musicToggle = document.getElementById("musicToggle");
 
 backgroundMusic.volume = 0.25;
