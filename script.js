@@ -460,3 +460,27 @@ musicToggle.addEventListener("click", async () => {
     musicToggle.textContent = "Play Music";
   }
 });
+
+const backgroundMusic = document.getElementById("backgroundMusic");
+const musicToggle = document.getElementById("musicToggle");
+
+if (backgroundMusic && musicToggle) {
+  backgroundMusic.volume = 0.25;
+
+  musicToggle.addEventListener("click", async () => {
+    try {
+      if (backgroundMusic.paused) {
+        await backgroundMusic.play();
+        musicToggle.textContent = "Pause Music";
+      } else {
+        backgroundMusic.pause();
+        musicToggle.textContent = "Play Music";
+      }
+    } catch (error) {
+      console.error("Music playback failed:", error);
+      musicToggle.textContent = "Music Error";
+    }
+  });
+} else {
+  console.error("Music player elements were not found.");
+}
