@@ -258,30 +258,6 @@ if (castleButton) {
     });
 }
 
-const mapCoordinates = document.getElementById("mapCoordinates");
-
-if (mapStage && mapCoordinates) {
-    mapStage.addEventListener("mousemove", (event) => {
-        const mapRect = mapStage.getBoundingClientRect();
-
-        const x = ((event.clientX - mapRect.left) / mapRect.width) * 100;
-        const y = ((event.clientY - mapRect.top) / mapRect.height) * 100;
-
-        mapCoordinates.textContent =
-            `X: ${x.toFixed(2)}% | Y: ${y.toFixed(2)}%`;
-    });
-
-    mapStage.addEventListener("click", (event) => {
-        const mapRect = mapStage.getBoundingClientRect();
-
-        const x = ((event.clientX - mapRect.left) / mapRect.width) * 100;
-        const y = ((event.clientY - mapRect.top) / mapRect.height) * 100;
-
-        console.log(
-            `style="left: ${x.toFixed(2)}%; top: ${y.toFixed(2)}%;"`
-        );
-    });
-}
 
 const holdName = document.getElementById("holdName");
 const owner = document.getElementById("owner");
@@ -501,3 +477,40 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+(() => {
+    const coordMapElement = document.querySelector(".map-stage");
+    const coordTextElement = document.getElementById("mapCoordinates");
+
+    if (!coordMapElement || !coordTextElement) {
+        console.warn("Coordinate map or display element could not be found.");
+        return;
+    }
+
+    coordMapElement.addEventListener("mousemove", (event) => {
+        const rect = coordMapElement.getBoundingClientRect();
+
+        const xPercent =
+            ((event.clientX - rect.left) / rect.width) * 100;
+
+        const yPercent =
+            ((event.clientY - rect.top) / rect.height) * 100;
+
+        coordTextElement.textContent =
+            `X: ${xPercent.toFixed(2)}% | Y: ${yPercent.toFixed(2)}%`;
+    });
+
+    coordMapElement.addEventListener("click", (event) => {
+        const rect = coordMapElement.getBoundingClientRect();
+
+        const xPercent =
+            ((event.clientX - rect.left) / rect.width) * 100;
+
+        const yPercent =
+            ((event.clientY - rect.top) / rect.height) * 100;
+
+        console.log(
+            `style="left: ${xPercent.toFixed(2)}%; top: ${yPercent.toFixed(2)}%;"`
+        );
+    });
+})();
