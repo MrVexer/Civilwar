@@ -258,6 +258,32 @@ if (castleButton) {
     });
 }
 
+const mapStage = document.getElementById("mapStage");
+const mapCoordinates = document.getElementById("mapCoordinates");
+
+if (mapStage && mapCoordinates) {
+    mapStage.addEventListener("mousemove", (event) => {
+        const mapRect = mapStage.getBoundingClientRect();
+
+        const x = ((event.clientX - mapRect.left) / mapRect.width) * 100;
+        const y = ((event.clientY - mapRect.top) / mapRect.height) * 100;
+
+        mapCoordinates.textContent =
+            `X: ${x.toFixed(2)}% | Y: ${y.toFixed(2)}%`;
+    });
+
+    mapStage.addEventListener("click", (event) => {
+        const mapRect = mapStage.getBoundingClientRect();
+
+        const x = ((event.clientX - mapRect.left) / mapRect.width) * 100;
+        const y = ((event.clientY - mapRect.top) / mapRect.height) * 100;
+
+        console.log(
+            `style="left: ${x.toFixed(2)}%; top: ${y.toFixed(2)}%;"`
+        );
+    });
+}
+
 const holdName = document.getElementById("holdName");
 const owner = document.getElementById("owner");
 const jarl = document.getElementById("jarl");
