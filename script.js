@@ -188,6 +188,14 @@ const castles = {
     garrison: "120 Soldiers",
     status: "Secure",
     description: "A fortified Imperial position."
+  },
+
+    "Fort Snowhawk": {
+    owner: "Empire",
+    commander: "Commander Name",
+    garrison: "120 Soldiers",
+    status: "Secure",
+    description: "A fortified Imperial position."
   }
 };
 
