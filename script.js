@@ -258,7 +258,6 @@ if (castleButton) {
     });
 }
 
-const mapStage = document.getElementById("mapStage");
 const mapCoordinates = document.getElementById("mapCoordinates");
 
 if (mapStage && mapCoordinates) {
