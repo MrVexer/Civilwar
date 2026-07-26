@@ -180,6 +180,14 @@ const castles = {
         supplies: "High",
         status: "Operational",
         description: "TBD."
+  },
+
+      "Fort Neugrad": {
+    owner: "Stormcloaks",
+    commander: "Commander Name",
+    garrison: "120 Soldiers",
+    status: "Secure",
+    description: "A fortified Imperial position."
   }
 };
 
