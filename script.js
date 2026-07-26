@@ -442,25 +442,6 @@ mapViewport.addEventListener("pointercancel", stopDragging);
 
 selectHold("Whiterun");
 
-const backgroundMusic = document.getElementById("background-music.mp3");
-const musicToggle = document.getElementById("musicToggle");
-
-backgroundMusic.volume = 0.25;
-
-musicToggle.addEventListener("click", async () => {
-  if (backgroundMusic.paused) {
-    try {
-      await backgroundMusic.play();
-      musicToggle.textContent = "Pause Music";
-    } catch (error) {
-      console.error("Music could not be played:", error);
-    }
-  } else {
-    backgroundMusic.pause();
-    musicToggle.textContent = "Play Music";
-  }
-});
-
 const backgroundMusic = document.getElementById("backgroundMusic");
 const musicToggle = document.getElementById("musicToggle");
 
@@ -482,5 +463,5 @@ if (backgroundMusic && musicToggle) {
     }
   });
 } else {
-  console.error("Music player elements were not found.");
+  console.error("Background music or music button was not found.");
 }
