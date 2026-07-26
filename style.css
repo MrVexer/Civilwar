@@ -207,7 +207,7 @@ p {
 .castle-hotspot:hover,
 .castle-hotspot:focus-visible,
 .castle-hotspot.selected {
-    opacity: 1;
+    opacity: 0.8;
     transform: translate(-50%, -50%) scale(1.2);
 
     background: #D7C796;
@@ -362,7 +362,7 @@ h2 {
     0 0 0 5px rgba(9, 3, 2, 0.62),
     0 0 20px var(--gold);
   outline: none;
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .hold-marker:hover span,
