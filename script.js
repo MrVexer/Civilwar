@@ -441,3 +441,22 @@ mapViewport.addEventListener("pointerup", stopDragging);
 mapViewport.addEventListener("pointercancel", stopDragging);
 
 selectHold("Whiterun");
+
+const backgroundMusic = document.getElementById("backgroundMusic");
+const musicToggle = document.getElementById("musicToggle");
+
+backgroundMusic.volume = 0.25;
+
+musicToggle.addEventListener("click", async () => {
+  if (backgroundMusic.paused) {
+    try {
+      await backgroundMusic.play();
+      musicToggle.textContent = "Pause Music";
+    } catch (error) {
+      console.error("Music could not be played:", error);
+    }
+  } else {
+    backgroundMusic.pause();
+    musicToggle.textContent = "Play Music";
+  }
+});
