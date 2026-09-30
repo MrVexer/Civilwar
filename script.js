@@ -530,31 +530,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const mapSelectButtons = [...document.querySelectorAll(".map-select-button")];
 const skyrimMapImage = document.getElementById("skyrimMap");
-const mapMarkers = [...document.querySelectorAll(".hold-marker, .castle-hotspot")];
+
+const holdMarkers = [...document.querySelectorAll(".hold-marker")];
 
 function selectMap(button) {
 
   const newMap = button.dataset.map;
-  const showMarkers = button.dataset.showMarkers === "true";
+  const showHolds = button.dataset.showHolds === "true";
 
   // Change map image
   skyrimMapImage.src = newMap;
 
-  // Highlight selected map button
+  // Highlight active map button
   mapSelectButtons.forEach(item => {
     item.classList.remove("active");
   });
 
   button.classList.add("active");
 
-  // Show or hide markers
-  mapMarkers.forEach(marker => {
-    marker.classList.toggle("map-marker-hidden", !showMarkers);
+  // Show/hide HOLD markers
+  holdMarkers.forEach(marker => {
+    marker.classList.toggle("map-marker-hidden", !showHolds);
   });
 }
 
 
-// Map button clicks
+// Button clicks
 mapSelectButtons.forEach(button => {
 
   button.addEventListener("click", () => {
@@ -564,10 +565,7 @@ mapSelectButtons.forEach(button => {
 });
 
 
-// ===========================
-// INITIAL MAP
-// ===========================
-
+// Set correct visibility when website first loads
 const initialMapButton = document.querySelector(".map-select-button.active");
 
 if (initialMapButton) {
