@@ -201,7 +201,7 @@ function showCastle(name) {
     // Change the information labels for castle details
     document.querySelector("#owner")
         .closest(".info-card")
-        .querySelector("h3").textContent = "Current Owner";
+        .querySelector("h3").textContent = "Controlled By";
 
     document.querySelector("#jarl")
         .closest(".info-card")
@@ -247,8 +247,8 @@ if (castleButton) {
 
 const holdName = document.getElementById("holdName");
 const owner = document.getElementById("owner");
+const capital = document.getElementById("capital");
 const jarl = document.getElementById("jarl");
-const status = document.getElementById("status");
 const strength = document.getElementById("strength");
 const description = document.getElementById("description");
 const ownerBadge = document.getElementById("ownerBadge");
@@ -271,13 +271,13 @@ function selectHold(name) {
     .closest(".info-card")
     .querySelector("h3").textContent = "Controlled By";
 
+document.querySelector("#capital")
+    .closest(".info-card")
+    .querySelector("h3").textContent = "Capital";
+
 document.querySelector("#jarl")
     .closest(".info-card")
     .querySelector("h3").textContent = "Jarl";
-
-document.querySelector("#status")
-    .closest(".info-card")
-    .querySelector("h3").textContent = "Status";
 
 document.querySelector("#strength")
     .closest(".info-card")
