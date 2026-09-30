@@ -522,3 +522,32 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     });
 })();
+
+
+// ===========================
+// Map Selection
+// ===========================
+
+const mapSelectButtons = [...document.querySelectorAll(".map-select-button")];
+const skyrimMapImage = document.getElementById("skyrimMap");
+
+mapSelectButtons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const newMap = button.dataset.map;
+
+    // Change the map image
+    skyrimMapImage.src = newMap;
+
+    // Remove active state from every button
+    mapSelectButtons.forEach(item => {
+      item.classList.remove("active");
+    });
+
+    // Highlight selected map button
+    button.classList.add("active");
+
+  });
+
+});
