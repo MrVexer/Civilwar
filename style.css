@@ -145,8 +145,8 @@ section,
 
 #mapCoordinates {
     position: absolute;
-    top: 12px;
-    left: 12px;
+    left: var(--x);
+    top: var(--y);
     z-index: 1000;
 
     padding: 7px 11px;
