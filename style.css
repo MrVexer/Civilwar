@@ -260,7 +260,7 @@ h2 {
 
 .campaign-layout {
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(300px, 1fr);
+  grid-template-columns: minmax(0, 3fr) minmax(280px, 1fr);
   gap: 24px;
   align-items: start;
   border: none;
@@ -399,7 +399,7 @@ h2 {
 .info-panel {
   position: sticky;
   top: 18px;
-  padding: 22px;
+  padding: 20px;
 }
 
 .eyebrow {
