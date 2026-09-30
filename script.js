@@ -1,72 +1,48 @@
 const holds = {
   "Haafingar": {
-    owner: "Empire",
-    jarl: "Elisif the Fair",
-    status: "Imperial capital",
+    owner: "Imperial Legion",
     strength: "★★★★★",
     description: "Home to Solitude and the Imperial administration in Skyrim. Its coastline and fortified capital make it one of the most strategically secure holds."
   },
 
   "Hjaalmarch": {
-    owner: "Empire",
-    jarl: "Idgrod Ravencrone",
-    status: "Stable",
+    owner: "Necomancers",
     strength: "★★★☆☆",
     description: "A difficult marshland centred on Morthal. Its terrain limits large army movement but provides strong defensive opportunities."
   },
 
   "The Reach": {
-    owner: "Empire",
-    jarl: "Igmund",
-    status: "Unrest reported",
+    owner: "Falmer Marauders",
     strength: "★★★★☆",
     description: "Markarth controls rich silver mines and mountain passes. The terrain strongly favours defenders and irregular warfare."
   },
 
   "Whiterun": {
-    owner: "Neutral",
-    jarl: "Balgruuf the Greater",
-    status: "Watching the war",
+    owner: "Whiterun Guards",
     strength: "★★★★★",
     description: "Whiterun controls the centre of Skyrim and remains a decisive strategic prize. Roads from nearly every major region pass through the hold."
   },
 
   "Falkreath": {
-    owner: "Empire",
-    jarl: "Siddgeir",
-    status: "Southern border secured",
+    owner: "Bandits",
     strength: "★★★☆☆",
     description: "Forested terrain and mountain passes protect Skyrim's southern approaches. Falkreath is vital for communication with Cyrodiil."
   },
 
   "The Pale": {
-    owner: "Empire",
-    jarl: "Valion The Ass",
-    status: "Fortified",
+    owner: "Imperial Legion",
     strength: "★★★★☆",
     description: "Dawnstar provides a northern port and access to the Sea of Ghosts. Harsh weather makes extended campaigns difficult."
   },
 
-  "Winterhold": {
-    owner: "Stormcloaks",
-    jarl: "Korir",
-    status: "Quiet",
-    strength: "★★☆☆☆",
-    description: "A sparsely populated northern hold. The College of Winterhold remains an important independent centre of magical power."
-  },
-
   "Eastmarch": {
     owner: "Stormcloaks",
-    jarl: "Ulfric Stormcloak",
-    status: "Stormcloak headquarters",
     strength: "★★★★★",
     description: "Windhelm is the political and military centre of the rebellion. Eastmarch is heavily defended and capable of supporting major armies."
   },
 
   "The Rift": {
-    owner: "Stormcloaks",
-    jarl: "Laila Law-Giver",
-    status: "Supply routes active",
+    owner: "Bandits",
     strength: "★★★☆☆",
     description: "The Rift controls routes into Morrowind and southern Skyrim. Its forests and waterways complicate military operations."
   }
@@ -75,127 +51,129 @@ const holds = {
 const castles = {
 
     "Fort Greymoor": {
-        owner: "Empire",
-        commander: "Legate Rikke",
-        garrison: 48,
-        supplies: "High",
-        status: "Fortified",
+        owner: "Whiterun Guards",
+        commander: "Unknown",
+        garrison: 00,
+        supplies: "Unknown",
+        status: "Unknown",
         description: "Protects the western approaches to Whiterun."
     },
 
     "Fort Dunstad": {
-        owner: "Empire",
-        commander: "Captain Hrolf",
-        garrison: 35,
-        supplies: "Medium",
-        status: "Under Watch",
+        owner: "Imperial Legion",
+        commander: "N/A",
+        garrison: 00,
+        supplies: "Unknown",
+        status: "Unknown",
         description: "Controls the road to Dawnstar."
     },
 
     "Northwatch Keep": {
-        owner: "Empire",
-        commander: "Legate Fasendil",
-        garrison: 42,
-        supplies: "High",
-        status: "Operational",
+        owner: "Imperial Legion",
+        commander: "Unknown",
+        garrison: 00,
+        supplies: "Unknown",
+        status: "Unknown",
         description: "Its primary operational responsibility is detaining, interrogating, and holding political prisoners."
     },
 
       "Fort Hraggstad": {
-        owner: "Empire",
-        commander: "Legate Fasendil",
-        garrison: 42,
-        supplies: "High",
-        status: "Operational",
+        owner: "Imperial Legion",
+        commander: "Unknown",
+        garrison: 00,
+        supplies: "Unknown",
+        status: "Unknown",
         description: "Imperial Legion training grounds."
     },
 
       "Broken Tower Redoubt": {
-        owner: "Empire",
-        commander: "Legate Fasendil",
-        garrison: 42,
-        supplies: "High",
-        status: "Operational",
-        description: "TBD."
+        owner: "Falmer Marauders",
+        commander: "Unknown",
+        garrison: 00,
+        supplies: "Unknown",
+        status: "Unknown",
+        description: "Unknown."
     },
 
       "Fort Sungard": {
-        owner: "Empire",
-        commander: "Vexor The Adventurer",
-        garrison: 42,
-        supplies: "High",
-        status: "Operational",
-        description: "TBD."
+        owner: "Forsworn",
+        commander: "Unknown",
+        garrison: 00,
+        supplies: "Unknown",
+        status: "Unknown",
+        description: "Unknown"
     },
 
       "Cracked Tusk Keep": {
-        owner: "Empire",
-        commander: "Legate Fasendil",
-        garrison: 42,
-        supplies: "High",
-        status: "Operational",
-        description: "TBD."
+        owner: "Unknown",
+        commander: "Unknown",
+        garrison: 00,
+        supplies: "Unknown",
+        status: "Unknown",
+        description: "Unknown"
     },
 
       "Fellglow Keep": {
-        owner: "Stormcloaks",
-        commander: "StormChud",
-        garrison: 42,
-        supplies: "High",
-        status: "Operational",
-        description: "TBD."
+        owner: "Unknown",
+        commander: "Unknown",
+        garrison: 00,
+        supplies: "Unknown",
+        status: "Unknown",
+        description: "Unknown"
     },
 
       "Fort Amol": {
         owner: "Stormcloaks",
-        commander: "StormChud",
-        garrison: 42,
-        supplies: "High",
-        status: "Operational",
-        description: "TBD."
+        commander: "Unknown",
+        garrison: 00,
+        supplies: "Unknown",
+        status: "Unknown",
+        description: "Unknown"
     },
 
       "Mistwatch": {
         owner: "Stormcloaks",
-        commander: "StormChud",
-        garrison: 42,
-        supplies: "High",
-        status: "Operational",
-        description: "TBD."
+        commander: "Unknown",
+        garrison: 00,
+        supplies: "Unknown",
+        status: "Unknown",
+        description: "Unknown"
     },
 
       "Fort Greenwall": {
-        owner: "Stormcloaks",
-        commander: "StormChud",
-        garrison: 42,
-        supplies: "High",
-        status: "Operational",
-        description: "TBD."
+        owner: "Bandits",
+        commander: "Unknown",
+        garrison: 00,
+        supplies: "Unknown",
+        status: "Unknown",
+        description: "Unknown"
     },
 
       "Faldar's Tooth": {
-        owner: "Stormcloaks",
-        commander: "StormChud",
-        garrison: 42,
-        supplies: "High",
-        status: "Operational",
-        description: "TBD."
+        owner: "Bandits",
+        commander: "Unknown",
+        garrison: 00,
+        supplies: "Unknown",
+        status: "Unknown",
+        description: "Unknown"
   },
 
       "Fort Neugrad": {
-    owner: "Stormcloaks",
-    commander: "Commander Name",
-    garrison: "120 Soldiers",
-    status: "Secure",
-    description: "A fortified Imperial position."
+        owner: "Bandits",
+        commander: "Unknown",
+        garrison: 00,
+        supplies: "Unknown",
+        status: "Unknown",
+        description: "Unknown"
   },
 
     "Fort Snowhawk": {
-    owner: "Empire",
-    commander: "Commander Name",
-    garrison: "120 Soldiers",
-    status: "Secure",
-    description: "A fortified Imperial position."
+        owner: "BNecomancers",
+        commander: "Unknown",
+        garrison: 00,
+        supplies: "Unknown",
+        status: "Unknown",
+        description: "Unknown"
   }
 };
 
@@ -291,7 +269,7 @@ function selectHold(name) {
 
   document.querySelector("#owner")
     .closest(".info-card")
-    .querySelector("h3").textContent = "Current Owner";
+    .querySelector("h3").textContent = "Controlled By";
 
 document.querySelector("#jarl")
     .closest(".info-card")
