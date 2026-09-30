@@ -530,23 +530,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const mapSelectButtons = [...document.querySelectorAll(".map-select-button")];
 const skyrimMapImage = document.getElementById("skyrimMap");
+const mapMarkers = [...document.querySelectorAll(".hold-marker, .castle-hotspot")];
 
 mapSelectButtons.forEach(button => {
 
   button.addEventListener("click", () => {
 
     const newMap = button.dataset.map;
+    const showMarkers = button.dataset.showMarkers === "true";
 
-    // Change the map image
+    // Change map image
     skyrimMapImage.src = newMap;
 
-    // Remove active state from every button
+    // Highlight selected map button
     mapSelectButtons.forEach(item => {
       item.classList.remove("active");
     });
 
-    // Highlight selected map button
     button.classList.add("active");
+
+    // Show or hide all map markers
+    mapMarkers.forEach(marker => {
+      marker.classList.toggle("map-marker-hidden", !showMarkers);
+    });
 
   });
 
