@@ -1,9 +1,11 @@
 const holds = {
   "Haafingar": {
-    owner: "Imperial Legion",
-    strength: "★★★★★",
-    description: "Home to Solitude and the Imperial administration in Skyrim. Its coastline and fortified capital make it one of the most strategically secure holds."
-  },
+  owner: "Imperial Legion",
+  capital: "Solitude",
+  jarl: "Elisif the Fair",
+  strength: "★★★★★",
+  description: "Home to Solitude and the Imperial administration in Skyrim. Its coastline and fortified capital make it one of the most strategically secure holds."
+},
 
   "Hjaalmarch": {
     owner: "Necomancers",
@@ -290,11 +292,11 @@ document.querySelector("#description")
 document.querySelector(".eyebrow").textContent = "Selected Hold";
   
   holdName.textContent = name;
-  owner.textContent = hold.owner;
-  jarl.textContent = hold.jarl;
-  status.textContent = hold.status;
-  strength.textContent = hold.strength;
-  description.textContent = hold.description;
+owner.textContent = hold.owner;
+capital.textContent = hold.capital;
+jarl.textContent = hold.jarl;
+strength.textContent = hold.strength;
+description.textContent = hold.description;
 
   ownerBadge.textContent = hold.owner;
   ownerBadge.className = `owner-badge ${ownerClass(hold.owner)}`;
