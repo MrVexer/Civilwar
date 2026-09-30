@@ -660,3 +660,9 @@ footer {
   }
 
 }
+
+
+/* Hide markers on maps that do not use them */
+.map-marker-hidden {
+  display: none !important;
+}
