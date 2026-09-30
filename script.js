@@ -532,28 +532,44 @@ const mapSelectButtons = [...document.querySelectorAll(".map-select-button")];
 const skyrimMapImage = document.getElementById("skyrimMap");
 const mapMarkers = [...document.querySelectorAll(".hold-marker, .castle-hotspot")];
 
+function selectMap(button) {
+
+  const newMap = button.dataset.map;
+  const showMarkers = button.dataset.showMarkers === "true";
+
+  // Change map image
+  skyrimMapImage.src = newMap;
+
+  // Highlight selected map button
+  mapSelectButtons.forEach(item => {
+    item.classList.remove("active");
+  });
+
+  button.classList.add("active");
+
+  // Show or hide markers
+  mapMarkers.forEach(marker => {
+    marker.classList.toggle("map-marker-hidden", !showMarkers);
+  });
+}
+
+
+// Map button clicks
 mapSelectButtons.forEach(button => {
 
   button.addEventListener("click", () => {
-
-    const newMap = button.dataset.map;
-    const showMarkers = button.dataset.showMarkers === "true";
-
-    // Change map image
-    skyrimMapImage.src = newMap;
-
-    // Highlight selected map button
-    mapSelectButtons.forEach(item => {
-      item.classList.remove("active");
-    });
-
-    button.classList.add("active");
-
-    // Show or hide all map markers
-    mapMarkers.forEach(marker => {
-      marker.classList.toggle("map-marker-hidden", !showMarkers);
-    });
-
+    selectMap(button);
   });
 
 });
+
+
+// ===========================
+// INITIAL MAP
+// ===========================
+
+const initialMapButton = document.querySelector(".map-select-button.active");
+
+if (initialMapButton) {
+  selectMap(initialMapButton);
+}
