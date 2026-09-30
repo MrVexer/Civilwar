@@ -81,6 +81,9 @@ button {
 .castle-hotspot {
     --marker-colour: var(--neutral);
 
+    left: var(--x);
+    top: var(--y);
+
     position: absolute;
     width: 32px;
     height: 32px;
@@ -145,8 +148,8 @@ section,
 
 #mapCoordinates {
     position: absolute;
-    left: var(--x);
-    top: var(--y);
+    top: 10px;
+    left: 10px;
     z-index: 1000;
 
     padding: 7px 11px;
