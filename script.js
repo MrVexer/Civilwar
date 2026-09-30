@@ -532,40 +532,46 @@ const mapSelectButtons = [...document.querySelectorAll(".map-select-button")];
 const skyrimMapImage = document.getElementById("skyrimMap");
 
 const holdMarkers = [...document.querySelectorAll(".hold-marker")];
+const fortMarkers = [...document.querySelectorAll(".castle-hotspot")];
 
 function selectMap(button) {
 
   const newMap = button.dataset.map;
-  const showHolds = button.dataset.showHolds === "true";
 
-  // Change map image
+  const showHolds = button.dataset.showHolds === "true";
+  const showForts = button.dataset.showForts === "true";
+
+  // Change map
   skyrimMapImage.src = newMap;
 
-  // Highlight active map button
+  // Active button
   mapSelectButtons.forEach(item => {
     item.classList.remove("active");
   });
 
   button.classList.add("active");
 
-  // Show/hide HOLD markers
+  // HOLD markers
   holdMarkers.forEach(marker => {
     marker.classList.toggle("map-marker-hidden", !showHolds);
+  });
+
+  // FORT markers
+  fortMarkers.forEach(marker => {
+    marker.classList.toggle("map-marker-hidden", !showForts);
   });
 }
 
 
-// Button clicks
+// Map button clicks
 mapSelectButtons.forEach(button => {
-
   button.addEventListener("click", () => {
     selectMap(button);
   });
-
 });
 
 
-// Set correct visibility when website first loads
+// Initialise correct map/markers on page load
 const initialMapButton = document.querySelector(".map-select-button.active");
 
 if (initialMapButton) {
