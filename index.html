@@ -43,31 +43,36 @@
         <div class="map-selector">
   <span class="map-selector-title">MAP VIEW</span>
 
-  <div class="map-selector-buttons">
-    <button class="map-select-button active"
-            data-map="Base Map.png"
-            type="button">
-      Base Map
-    </button>
+<div class="map-selector-buttons">
 
-    <button class="map-select-button"
-            data-map="War Map.png"
-            type="button">
-      War Map
-    </button>
+  <button class="map-select-button active"
+          data-map="Base Map.png"
+          data-show-markers="False"
+          type="button">
+    Base Map
+  </button>
 
-    <button class="map-select-button"
-            data-map="Holds Map.png"
-            type="button">
-      Holds Map
-    </button>
+  <button class="map-select-button"
+          data-map="War Map.png"
+          data-show-markers="true"
+          type="button">
+    War Map
+  </button>
 
-    <button class="map-select-button"
-            data-map="Combined Map.png"
-            type="button">
-      Combined Map
-    </button>
-  </div>
+  <button class="map-select-button"
+          data-map="Holds Map.png"
+          data-show-markers="false"
+          type="button">
+    Holds Map
+  </button>
+
+  <button class="map-select-button"
+          data-map="Combined Map.png"
+          data-show-markers="True"
+          type="button">
+    Combined Map
+  </button>
+
 </div>
 
         <div class="map-viewport" id="mapViewport">
