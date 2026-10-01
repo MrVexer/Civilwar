@@ -8,7 +8,7 @@ const holds = {
 },
 
   "Hjaalmarch": {
-    owner: "Necomancers",
+    owner: "Necromancers",
     capital: "Morthal",
     jarl: "Mjoll Wolfs-Bane",
     strength: "★★★☆☆",
@@ -184,7 +184,7 @@ const castles = {
   },
 
     "Fort Snowhawk": {
-        owner: "BNecomancers",
+        owner: "Necomancers",
         commander: "Unknown",
         garrison: 00,
         supplies: "Unknown",
