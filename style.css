@@ -543,27 +543,36 @@ h2 {
   background: rgba(70, 15, 15, 0.28);
 }
 
-.swatch {
-  width: 22px;
-  height: 22px;
-  border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.65);
-}
-
-.swatch.empire {
-  background: var(--empire);
+.swatch.imperial-legion {
+  background: #a83a3a;
 }
 
 .swatch.stormcloaks {
-  background: var(--stormcloaks);
+  background: #3b6fa8;
 }
 
-.swatch.neutral {
-  background: var(--neutral);
+.swatch.whiterun-guards {
+  background: #c09a36;
 }
 
-.swatch.contested {
-  background: var(--contested);
+.swatch.bandits {
+  background: #6f4934;
+}
+
+.swatch.falmer-marauders {
+  background: #7898a3;
+}
+
+.swatch.forsworn {
+  background: #547548;
+}
+
+.swatch.necromancers {
+  background: #704b91;
+}
+
+.swatch.unknown {
+  background: #8c816d;
 }
 
 footer {
