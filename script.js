@@ -196,6 +196,9 @@ const castles = {
 function showCastle(name) {
     const castle = castles[name];
 
+  document.getElementById("capitalCard").style.display = "none";
+
+  
     if (!castle) {
         console.warn(`No castle data found for: ${name}`);
         return;
@@ -278,6 +281,8 @@ function ownerClass(ownerName) {
 
 function selectHold(name) {
   const hold = holds[name];
+
+  document.getElementById("capitalCard").style.display = "";
 
   if (!hold) {
     return;
