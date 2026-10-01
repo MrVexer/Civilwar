@@ -375,20 +375,56 @@ h2 {
   transform: translateX(-50%) translateY(0);
 }
 
-.hold-marker[data-owner="Empire"] {
-  --marker-colour: var(--empire);
+/* ===========================
+   Marker Owner Colours
+=========================== */
+
+/* Imperial Legion - Red */
+.hold-marker[data-owner="Imperial Legion"],
+.castle-hotspot[data-owner="Imperial Legion"] {
+  --marker-colour: #a83a3a;
 }
 
-.hold-marker[data-owner="Stormcloaks"] {
-  --marker-colour: var(--stormcloaks);
+/* Stormcloaks - Blue */
+.hold-marker[data-owner="Stormcloaks"],
+.castle-hotspot[data-owner="Stormcloaks"] {
+  --marker-colour: #3b6fa8;
 }
 
-.hold-marker[data-owner="Neutral"] {
-  --marker-colour: var(--neutral);
+/* Whiterun Guards - Gold */
+.hold-marker[data-owner="Whiterun Guards"],
+.castle-hotspot[data-owner="Whiterun Guards"] {
+  --marker-colour: #c09a36;
 }
 
-.hold-marker[data-owner="Contested"] {
-  --marker-colour: var(--contested);
+/* Bandits - Dark Brown */
+.hold-marker[data-owner="Bandits"],
+.castle-hotspot[data-owner="Bandits"] {
+  --marker-colour: #6f4934;
+}
+
+/* Falmer Marauders - Pale Blue */
+.hold-marker[data-owner="Falmer Marauders"],
+.castle-hotspot[data-owner="Falmer Marauders"] {
+  --marker-colour: #7898a3;
+}
+
+/* Forsworn - Green */
+.hold-marker[data-owner="Forsworn"],
+.castle-hotspot[data-owner="Forsworn"] {
+  --marker-colour: #547548;
+}
+
+/* Necromancers - Purple */
+.hold-marker[data-owner="Necromancers"],
+.castle-hotspot[data-owner="Necromancers"] {
+  --marker-colour: #704b91;
+}
+
+/* Unknown */
+.hold-marker[data-owner="Unknown"],
+.castle-hotspot[data-owner="Unknown"] {
+  --marker-colour: #8c816d;
 }
 
 .hold-marker.hidden-by-filter {
