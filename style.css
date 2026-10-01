@@ -543,36 +543,57 @@ h2 {
   background: rgba(70, 15, 15, 0.28);
 }
 
+/* ===========================
+   Campaign Legend Colours
+=========================== */
+
+.swatch {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 4px;
+  border: 1px solid var(--gold);
+}
+
+/* Imperial Legion */
 .swatch.imperial-legion {
-  background: #a83a3a;
+  background-color: #a83a3a;
 }
 
+/* Stormcloaks */
 .swatch.stormcloaks {
-  background: #3b6fa8;
+  background-color: #3b6fa8;
 }
 
+/* Whiterun Guards */
 .swatch.whiterun-guards {
-  background: #c09a36;
+  background-color: #c09a36;
 }
 
+/* Bandits */
 .swatch.bandits {
-  background: #6f4934;
+  background-color: #6f4934;
 }
 
+/* Falmer Marauders */
 .swatch.falmer-marauders {
-  background: #7898a3;
+  background-color: #7898a3;
 }
 
+/* Forsworn */
 .swatch.forsworn {
-  background: #547548;
+  background-color: #547548;
 }
 
+/* Necromancers */
 .swatch.necromancers {
-  background: #704b91;
+  background-color: #704b91;
 }
 
+/* Unknown */
 .swatch.unknown {
-  background: #8c816d;
+  background-color: #8c816d;
 }
 
 footer {
