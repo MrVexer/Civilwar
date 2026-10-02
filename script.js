@@ -1,49 +1,49 @@
 const holds = {
   "Haafingar": {
-  owner: "Imperial Legion",
+  owner: "Mede Empire",
   capital: "Solitude",
-  jarl: "Freyja Storm-Bringer",
+  jarl: "Jarl Freyja Storm-Bringer",
   strength: "★★★★★",
   description: "Home to Solitude and the Imperial administration in Skyrim. Its coastline and fortified capital make it one of the most strategically secure holds."
 },
 
   "Hjaalmarch": {
-    owner: "Necromancers",
+    owner: "Neutral",
     capital: "Morthal",
-    jarl: "Mjoll Wolfs-Bane",
+    jarl: "Jarl Mjoll Wolfs-Bane",
     strength: "★★★☆☆",
     description: "A difficult marshland centred on Morthal. Its terrain limits large army movement but provides strong defensive opportunities."
   },
 
   "The Reach": {
-    owner: "Falmer Marauders",
+    owner: "Neutral",
     capital: "Markarth",
-    jarl: "Jothar Iron-Helm II",
+    jarl: "Jarl Jothar Iron-Helm II",
     strength: "★★★★☆",
     description: "Markarth controls rich silver mines and mountain passes. The terrain strongly favours defenders and irregular warfare."
   },
 
   "Whiterun": {
-    owner: "Whiterun Guards",
+    owner: "Neutral",
     capital: "Whiterun",
-    jarl: "Balgruuf the Greater",
+    jarl: "Jarl Balgruuf the Greater",
     strength: "★★★★★",
     description: "Whiterun controls the centre of Skyrim and remains a decisive strategic prize. Roads from nearly every major region pass through the hold."
   },
 
   "Falkreath": {
-    owner: "Bandits",
+    owner: "Neutral",
     capital: "Falkreath",
     jarl: "N/A",
-    strength: "★★★☆☆",
+    strength: "☆☆☆☆☆",
     description: "Forested terrain and mountain passes protect Skyrim's southern approaches. Falkreath is vital for communication with Cyrodiil."
   },
 
   "The Pale": {
-    owner: "Imperial Legion",
+    owner: "Neutral",
     capital: "Dawnstar",
-    jarl: "Ulysses Dragon-Heart",
-    strength: "★★★★☆",
+    jarl: "Jarl Ulysses Dragon-Heart",
+    strength: "★★☆☆☆",
     description: "Dawnstar provides a northern port and access to the Sea of Ghosts. Harsh weather makes extended campaigns difficult."
   },
 
@@ -51,15 +51,15 @@ const holds = {
     owner: "Stormcloaks",
     capital: "Windhelm",
     jarl: "Regent Ingvar the Younger",
-    strength: "★★★★★",
+    strength: "★★★☆☆",
     description: "Windhelm is the political and military centre of the rebellion. Eastmarch is heavily defended and capable of supporting major armies."
   },
 
   "The Rift": {
-    owner: "Bandits",
+    owner: "Neutral",
     capital: "Regent Signy Windtorn",
-    jarl: "Elisif the Fair",
-    strength: "★★★☆☆",
+    jarl: "Regent Signy Windtorn",
+    strength: "★☆☆☆☆",
     description: "The Rift controls routes into Morrowind and southern Skyrim. Its forests and waterways complicate military operations."
   }
 };
@@ -76,7 +76,7 @@ const castles = {
     },
 
     "Fort Dunstad": {
-        owner: "Imperial Legion",
+        owner: "Bandits",
         commander: "N/A",
         garrison: 00,
         supplies: "Unknown",
@@ -117,7 +117,7 @@ const castles = {
         garrison: 00,
         supplies: "Unknown",
         status: "Unknown",
-        description: "Unknown"
+        description: "A commanding presence over trade routes."
     },
 
       "Cracked Tusk Keep": {
