@@ -50,7 +50,7 @@ const holds = {
   "Eastmarch": {
     owner: "Stormcloaks",
     capital: "Windhelm",
-    jarl: "Regent Ingvar the Younger",
+    jarl: "Steward Stenvar the Ironhand",
     strength: "★★★☆☆",
     description: "Windhelm is the political and military centre of the rebellion. Eastmarch is heavily defended and capable of supporting major armies."
   },
@@ -69,7 +69,7 @@ const castles = {
     "Fort Greymoor": {
         owner: "Whiterun Guards",
         commander: "Unknown",
-        garrison: 00,
+        garrison: 40,
         supplies: "Unknown",
         status: "Unknown",
         description: "Protects the western approaches to Whiterun."
@@ -78,7 +78,7 @@ const castles = {
     "Fort Dunstad": {
         owner: "Bandits",
         commander: "N/A",
-        garrison: 00,
+        garrison: 32,
         supplies: "Unknown",
         status: "Unknown",
         description: "Controls the road to Dawnstar."
@@ -87,7 +87,7 @@ const castles = {
     "Northwatch Keep": {
         owner: "Imperial Legion",
         commander: "Unknown",
-        garrison: 00,
+        garrison: 20,
         supplies: "Unknown",
         status: "Unknown",
         description: "Its primary operational responsibility is detaining, interrogating, and holding political prisoners."
@@ -96,7 +96,7 @@ const castles = {
       "Fort Hraggstad": {
         owner: "Imperial Legion",
         commander: "Unknown",
-        garrison: 00,
+        garrison: 30,
         supplies: "Unknown",
         status: "Unknown",
         description: "Imperial Legion training grounds."
@@ -105,7 +105,7 @@ const castles = {
       "Broken Tower Redoubt": {
         owner: "Falmer Marauders",
         commander: "Unknown",
-        garrison: 00,
+        garrison: 50,
         supplies: "Unknown",
         status: "Unknown",
         description: "Unknown."
@@ -114,7 +114,7 @@ const castles = {
       "Fort Sungard": {
         owner: "Forsworn",
         commander: "Unknown",
-        garrison: 00,
+        garrison: 50,
         supplies: "Unknown",
         status: "Unknown",
         description: "A commanding presence over trade routes."
@@ -141,7 +141,7 @@ const castles = {
       "Fort Amol": {
         owner: "Stormcloaks",
         commander: "Unknown",
-        garrison: 00,
+        garrison: 30,
         supplies: "Unknown",
         status: "Unknown",
         description: "Unknown"
@@ -150,7 +150,7 @@ const castles = {
       "Mistwatch": {
         owner: "Stormcloaks",
         commander: "Unknown",
-        garrison: 00,
+        garrison: 30,
         supplies: "Unknown",
         status: "Unknown",
         description: "Unknown"
@@ -159,7 +159,7 @@ const castles = {
       "Fort Greenwall": {
         owner: "Bandits",
         commander: "Unknown",
-        garrison: 00,
+        garrison: 45,
         supplies: "Unknown",
         status: "Unknown",
         description: "Unknown"
@@ -168,7 +168,7 @@ const castles = {
       "Faldar's Tooth": {
         owner: "Bandits",
         commander: "Unknown",
-        garrison: 00,
+        garrison: 28,
         supplies: "Unknown",
         status: "Unknown",
         description: "Unknown"
@@ -177,7 +177,7 @@ const castles = {
       "Fort Neugrad": {
         owner: "Bandits",
         commander: "Unknown",
-        garrison: 00,
+        garrison: 36,
         supplies: "Unknown",
         status: "Unknown",
         description: "Unknown"
@@ -186,7 +186,7 @@ const castles = {
     "Fort Snowhawk": {
         owner: "Necomancers",
         commander: "Unknown",
-        garrison: 00,
+        garrison: 10,
         supplies: "Unknown",
         status: "Unknown",
         description: "Unknown"
